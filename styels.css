@@ -1,0 +1,1063 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  --primary-color: #f40612;
+  --secondary-color: hsl(210, 22%, 49%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --text-color: #ffffff;
+  --bg-color: #000000;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--ff-secondary);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* header */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem 0 2rem;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.login {
+  width: 61px;
+  height: 25px;
+  background-color: var(--primary-color);
+  border: transparent;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+
+.logo img {
+  width: 110px;
+}
+
+/* hero */
+.hero {
+  background-image: url("./images/images1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 82.5%;
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(2, 2, 2, 0.5);
+  box-shadow: inset 0 50px 60px #000000, inset 0 -50px 60px #000000;
+}
+
+.hero::after {
+  content: "";
+  width: 100vw;
+  height: 8px;
+  background: #222222;
+  position: absolute;
+  bottom: 0;
+}
+
+.hero-info {
+  max-width: 85vw;
+  position: absolute;
+  color: #fff;
+  z-index: 1000;
+  text-align: center;
+  letter-spacing: 1.7px;
+  margin-top: 1.5rem;
+}
+
+.hero-info h2 {
+  font-size: 1.5em;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.watch {
+  margin-top: 1rem;
+  font-size: 0.98em;
+  letter-spacing: 1px;
+}
+
+.ready-watch {
+  max-width: 70vw;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: 1em;
+  letter-spacing: 0.4;
+  font-weight: 500;
+}
+
+.hero-info form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 0.7rem;
+}
+
+.input-text {
+  width: 85vw;
+  padding: 16px 10px 14px 10px;
+  font-size: 1em;
+}
+
+.hero-info form label {
+  position: absolute;
+  left: 12px;
+  color: gray;
+  bottom: 1.2rem;
+  font-size: 1em;
+  letter-spacing: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.input-text:focus ~ label,
+.input-text:valid ~ label {
+  transform: translateY(-1.1rem);
+  font-size: 0.8em;
+}
+
+.input-text:focus {
+  border: transparent !important;
+}
+
+.register {
+  font-size: 1rem;
+  background-color: #ce0a14;
+  border: transparent;
+  padding: 10px 15px;
+  color: #fff;
+  margin-top: 0.8rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.register:hover {
+  background-color: var(--primary-color);
+}
+
+.underline {
+  width: 100vw;
+  height: 8px;
+  background-color: #222222;
+}
+
+/* watch-list */
+.watch-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70vh;
+}
+
+.tv img {
+  width: 500px;
+}
+
+.enjoyment {
+  width: 40%;
+}
+
+.enjoyment h1 {
+  font-size: 3em;
+}
+
+.enjoyment p {
+  font-size: 1.5em;
+  margin-top: 1rem;
+}
+
+/* download */
+.download {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70vh;
+}
+
+.girl img {
+  width: 500px;
+}
+
+.option {
+  width: 40%;
+}
+
+.option h1 {
+  font-size: 2.9em;
+  line-height: 1.2em;
+}
+
+.option p {
+  font-size: 1.5em;
+  margin-top: 0.9rem;
+}
+
+/* watch-everywhere */
+.everywhere {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70vh;
+}
+
+.boy img {
+  width: 500px;
+}
+
+.movies {
+  width: 40%;
+}
+
+.movies h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+}
+
+.movies p {
+  font-size: 1.5em;
+  margin-top: 0.9rem;
+}
+
+/* kids */
+.kids {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70vh;
+}
+
+.kid img {
+  width: 500px;
+}
+
+.profiles {
+  width: 40%;
+}
+
+.profiles h1 {
+  font-size: 2.8em;
+  line-height: 1.2em;
+}
+
+.profiles p {
+  font-size: 1.5em;
+  margin-top: 0.9rem;
+}
+
+/* faq */
+.faq {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.faq h1 {
+  font-size: 3em;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: 3.7rem;
+}
+
+.quastions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.2rem;
+  flex-direction: column;
+}
+
+.part {
+  display: flex;
+  flex-direction: column;
+  background-color: #303030;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  width: 63vw;
+  margin-top: 8px;
+}
+
+.quastion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 1.8rem;
+  cursor: pointer;
+}
+
+.answer {
+  text-align: left;
+  line-height: 2rem;
+  border-top: solid 2px #222222;
+  padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+  display: none;
+  transition: all 0.3s linear;
+}
+
+.btn-toggle {
+  transition: all 1s ease;
+}
+
+.btn-toggle span {
+  font-size: 2rem;
+}
+
+.show-answer {
+  display: block;
+}
+
+.circle {
+  display: none;
+}
+
+.remove-plus {
+  display: none;
+}
+
+.show-circle {
+  display: block;
+}
+
+.answer p {
+  margin-top: 1rem;
+}
+
+/* register-form */
+.register-form {
+  margin: 2.5rem 0 5rem 0;
+  width: 50vw;
+}
+
+.register-form form {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-register {
+  width: 35vw;
+  padding: 18px 10px 18px 10px;
+  font-size: 1em;
+}
+
+#input-place {
+  position: absolute;
+  color: gray;
+  left: 21.2rem;
+  transition: all 0.1s ease;
+}
+
+.input-register:focus ~ label,
+.input-register:valid ~ label {
+  transform: translateY(-1rem);
+  font-size: 0.8em;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  min-height: 50vh;
+}
+
+.footer-content {
+  max-width: 70vw;
+  margin: 0 auto;
+  text-align: left;
+  padding: 4.2rem 0 1rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #757575;
+}
+
+.footer-content a:hover {
+  border-bottom: solid 1.5px #757575;
+}
+
+.footer-menus {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-lists {
+  margin-top: 1.5rem;
+  font-size: 0.85em;
+}
+
+.footer-lists li {
+  line-height: 2rem;
+}
+
+.location {
+  font-size: 0.85em;
+  margin-top: 2rem;
+  color: #757575;
+}
+
+@media screen and (max-width: 1000px) {
+  .watch-list {
+    min-height: 60vh;
+  }
+
+  .tv img {
+    width: 400px;
+  }
+
+  .enjoyment {
+    width: 45%;
+  }
+
+  /* download */
+  .download {
+    min-height: 60vh;
+  }
+
+  .girl img {
+    width: 400px;
+  }
+
+  .option {
+    width: 45%;
+  }
+
+  /* everywhere */
+  .everywhere {
+    min-height: 60vh;
+  }
+
+  .boy img {
+    width: 400px;
+  }
+
+  .movies {
+    width: 45%;
+  }
+
+  /* kids */
+  .kids {
+    min-height: 60vh;
+  }
+
+  .kid img {
+    width: 400px;
+  }
+
+  .profiles {
+    width: 45%;
+  }
+
+  /* faq */
+  .faq h1 {
+    font-size: 2.3em;
+    margin-top: 2.8rem;
+    width: 80vw;
+  }
+
+  .quastions {
+    margin-top: 1rem;
+  }
+
+  .part {
+    font-size: 1.2em;
+    width: 80vw;
+  }
+
+  .quastion {
+    padding: 1rem 1.8rem;
+  }
+
+  .answer {
+    text-align: left;
+    line-height: 1.4rem;
+    padding: 0.4rem 1.8rem 1.3rem 1.8rem;
+  }
+
+  .answer p {
+    margin-top: 1rem;
+  }
+
+  .btn-toggle span {
+    font-size: 1.2rem;
+  }
+
+  /* register-form */
+  .register-form {
+    margin: 1rem 0 3.5rem 0;
+    width: 80vw;
+  }
+
+  .register-form form {
+    margin-top: 1rem;
+  }
+
+  .input-register {
+    width: 60vw;
+    padding: 18px 10px 18px 10px;
+    font-size: 1em;
+  }
+
+  #input-place {
+    display: none;
+  }
+
+  /* footer */
+  .footer-content {
+    max-width: 80vw;
+    padding: 4rem 0 2rem 0;
+  }
+
+  .footer-menus {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 1.5em;
+  }
+
+  .footer-lists {
+    margin-top: 0;
+    font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .hero-info form label {
+    position: absolute;
+    left: 26px;
+    color: gray;
+    bottom: 4.5rem;
+    font-size: 0.9em;
+    letter-spacing: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+
+  .watch-list {
+    padding: 3rem 0;
+  }
+
+  .enjoyment {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .enjoyment h1 {
+    font-size: 2.5em;
+  }
+
+  .enjoyment p {
+    font-size: 1.2em;
+  }
+
+  .tv img {
+    width: 450px;
+  }
+
+  /* download */
+  .download {
+    padding: 3rem 0;
+  }
+
+  .girl {
+    order: 2;
+  }
+
+  .option {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .option h1 {
+    font-size: 2.5em;
+  }
+
+  .option p {
+    font-size: 1.2em;
+  }
+
+  .girl img {
+    width: 450px;
+  }
+
+  /* everywhere */
+  .everywhere {
+    padding: 3rem 0;
+  }
+
+  .movies {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .movies h1 {
+    font-size: 2.5em;
+  }
+
+  .movies p {
+    font-size: 1.2em;
+  }
+
+  .boy img {
+    width: 450px;
+  }
+
+  /* kids */
+  .kids {
+    padding: 3rem 0;
+  }
+
+  .profiles {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .kid {
+    order: 2;
+  }
+
+  .profiles h1 {
+    font-size: 2.5em;
+  }
+
+  .profiles p {
+    font-size: 1.2em;
+  }
+
+  .kid img {
+    width: 450px;
+  }
+
+  /* faq */
+  .faq h1 {
+    font-size: 2.3em;
+    margin-top: 2.8rem;
+    width: 73vw;
+  }
+
+  .quastions {
+    margin-top: 1rem;
+  }
+
+  .part {
+    font-size: 1.2em;
+    width: 73vw;
+  }
+
+  .quastion {
+    padding: 1rem 1.8rem;
+  }
+
+  .answer {
+    text-align: left;
+    line-height: 1.4rem;
+    padding: 0.4rem 1.8rem 1.3rem 1.8rem;
+  }
+
+  .answer p {
+    margin-top: 1rem;
+  }
+
+  .btn-toggle span {
+    font-size: 1.2rem;
+  }
+
+  /* register-form */
+  .register-form {
+    margin: 1rem 0 3.5rem 0;
+    width: 80vw;
+  }
+
+  .register-form form {
+    margin-top: 1rem;
+  }
+
+  .input-register {
+    width: 70vw;
+    padding: 13px 10px 13px 10px;
+    font-size: 1em;
+  }
+
+  #input-place {
+    display: none;
+  }
+
+  /* footer */
+  .footer-content {
+    max-width: 70vw;
+    padding: 4rem 0 2rem 0;
+  }
+
+  .footer-menus {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1.5em;
+  }
+
+  .footer-lists {
+    margin-top: 0;
+    font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-info form label {
+    position: absolute;
+    left: 12px;
+    color: gray;
+    bottom: 4.2rem;
+    font-size: 0.9em;
+    letter-spacing: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+
+  .watch-list {
+    min-height: 0;
+    padding: 3rem 0;
+  }
+
+  .enjoyment {
+    width: 90vw;
+    text-align: center;
+  }
+
+  .enjoyment h1 {
+    font-size: 1.5em;
+  }
+
+  .enjoyment p {
+    font-size: 1.1em;
+  }
+
+  .tv img {
+    /* width: 400px; */
+    width: 85vw;
+  }
+
+  /* download */
+  .download {
+    min-height: 0;
+    padding: 3rem 0;
+  }
+
+  .girl {
+    order: 2;
+  }
+
+  .option {
+    width: 90vw;
+    text-align: center;
+  }
+
+  .option h1 {
+    font-size: 1.6em;
+    line-height: 1.2em;
+  }
+
+  .option p {
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+
+  .girl img {
+    width: 85vw;
+  }
+
+  /* everywhere */
+  .everywhere {
+    min-height: 0;
+    padding: 3rem 0;
+  }
+
+  .movies {
+    width: 90vw;
+    text-align: center;
+  }
+
+  .movies h1 {
+    font-size: 1.6em;
+    line-height: 1.2em;
+  }
+
+  .movies p {
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+
+  .boy img {
+    width: 85vw;
+  }
+
+  /* kids */
+  .kids {
+    min-height: 0;
+    padding: 3rem 0;
+  }
+
+  .profiles {
+    width: 88vw;
+    text-align: center;
+  }
+
+  .kid {
+    order: 2;
+  }
+
+  .profiles h1 {
+    font-size: 1.6em;
+    line-height: 1.2em;
+  }
+
+  .profiles p {
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+
+  .kid img {
+    width: 85vw;
+  }
+
+  /* faq */
+  .faq h1 {
+    font-size: 1.5em;
+    margin-top: 2.8rem;
+  }
+
+  .quastions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .part {
+    font-size: 1em;
+    width: 100vw;
+  }
+
+  .quastion {
+    padding: 1rem 1.8rem;
+  }
+
+  .answer {
+    text-align: left;
+    line-height: 1.4rem;
+    padding: 0.4rem 1.8rem 1.3rem 1.8rem;
+  }
+
+  .answer p {
+    margin-top: 1rem;
+  }
+
+  .btn-toggle span {
+    font-size: 1.2rem;
+  }
+
+  /* register-form */
+  .register-form {
+    margin: 1rem 0 3.5rem 0;
+    width: 80vw;
+  }
+
+  .register-form form {
+    margin-top: 1rem;
+  }
+
+  .input-register {
+    width: 80vw;
+    padding: 13px 10px 13px 10px;
+    font-size: 1em;
+  }
+
+  #input-place {
+    display: none;
+  }
+
+  /* footer */
+  .footer-content {
+    max-width: 78vw;
+    padding: 3rem 0 2rem 0;
+  }
+
+  .footer-menus {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1.5em;
+  }
+
+  .footer-lists {
+    margin-top: 0;
+    font-size: 0.85em;
+  }
+}
+
+/* media-queries for header */
+@media screen and (min-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .login {
+    width: 80px;
+    height: 34px;
+    font-size: 1em;
+  }
+
+  .hero {
+    height: 110vh;
+  }
+
+  .hero-info {
+    margin-top: 5rem;
+  }
+
+  .hero-info h2 {
+    max-width: 75vw;
+    font-size: 2.9em;
+    line-height: 1.2em;
+  }
+
+  .watch {
+    font-size: 1.4em;
+  }
+
+  .ready-watch {
+    width: 61vw;
+    font-size: 1.3em;
+  }
+
+  .input-text {
+    width: 70vw;
+    padding: 18px 10px;
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-info {
+    width: 60vw;
+  }
+
+  .hero-info h2 {
+    font-size: 2.9em;
+  }
+
+  .watch {
+    font-size: 1.5em;
+  }
+
+  .ready-watch {
+    max-width: 54vw;
+    font-size: 1.4em;
+  }
+
+  .input-text {
+    max-width: 55vw;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .hero-info form {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .ready-watch {
+    font-size: 1.2em;
+  }
+
+  .register {
+    padding: 18px 20px;
+    margin-top: 0;
+    font-size: 1.2em;
+  }
+
+  .header-top {
+    margin: 1rem 2.8rem 0 2.8rem;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hero-info {
+    max-width: 50vw;
+    margin-top: 1rem;
+  }
+
+  .hero-info h2 {
+    font-size: 2.9em;
+  }
+
+  .watch {
+    font-size: 1.5em;
+  }
+
+  .ready-watch {
+    max-width: 100%;
+    font-size: 1.1em;
+    margin-top: 1.8rem;
+  }
+
+  .hero-info form {
+    margin-top: 1rem;
+  }
+}
+/* end media-queries for header */
+
+/* mobile */
+@media screen and (max-width: 400px) {
+  .ready-watch {
+    max-width: 100vw;
+  }
+}
